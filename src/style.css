@@ -72,3 +72,55 @@ textarea:focus {
 .upperCase {
   text-transform: uppercase;
 }
+
+audio {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 500px;
+    height: 100vh;
+  }
+  main {
+    width: 500px;
+  }
+  textarea {
+    width: 400px;
+  }
+  button {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  .keyBoard {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .keyBoard button:nth-child(31), /* capslock. shift. return*/
+  .keyBoard button:nth-child(43),
+  .keyBoard button:nth-child(45),
+  .keyBoard button:nth-child(57) {
+    width: 98px; /*122*/
+  }
+
+  .keyBoard button:nth-child(14),
+  .keyBoard button:nth-child(16),
+  .keyBoard button:nth-child(59),
+  .keyBoard button:nth-child(60),
+  .keyBoard button:nth-child(61),
+  .keyBoard button:nth-child(63) {
+    width: 98px; /*120px;*/
+  }
+
+  .keyBoard button:nth-child(62) {
+    width: 200px; /*278px;*/
+  }
+}
